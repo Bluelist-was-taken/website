@@ -4,15 +4,34 @@ const index = code.search("code=") + 5
 const end = code.indexOf("&", index)
 console.log(code.slice(index, end != -1 ? code.length : end))
 
-function submitSearchQuery() {
-    const discordRequest = new XMLHttpRequest()
-    discordRequest.open("get", "https://discord.com/api/v10/users/826517140193542186")
-    discordRequest.send()
-    const elem = document.createElement("a")
-    elem.innerText = discordRequest.response
+function update_search_results() {
+    const query = document.getElementById("search").value;
+    data = explorer_search(query);
+
+    const minecraftName = document.createElement("a");
+    minecraftName.innerText = data["minecraft"]["username"]
+
+    const UUID = document.createElement("a");
+    UUID.innerText = data["minecraft"]["uuid"]
+
+    const discordName = document.createElement("a");
+    discordName.style.float = "right";
+    discordName.innerText = data["discord"]["username"]
+
+    const discordID = document.createElement("a");
+    discordID.style.float = "right";
+    discordID.innerText = data["discord"]["id"]
+
+    const container = document.createElement("div");
+
+    container.appendChild(minecraftName);
+    container.appendChild(UUID);
+    container.appendChild(discordName);
+    container.appendChild(discordID);
 
     const results = document.getElementById("results")
-    results.appendChild(elem)
+    results.appendChild(container)
+
 }
 
 function getAccessToken(id, secret) {

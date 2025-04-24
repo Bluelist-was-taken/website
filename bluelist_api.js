@@ -1,6 +1,6 @@
 // Code from Annhilati
 
-function explorer_lookup(search) {
+function explorer_search(search) {
 
     Endpoint = "localhost:3000/api/dev/search/"
     const url = Endpoint + search

@@ -22,8 +22,8 @@
     <div class="flex-grow flex items-center justify-center">
         <div class="text-center space-y-4 w-full max-w-4xl px-4">
             <h1 class="text-2xl font-semibold">Bluelist Explorer</h1>
-            <input type="text" placeholder="Search ..."
-                class="border border-gray-700 bg-gray-800 text-white p-2 rounded w-full md:w-[40%] mx-auto" oninput="submitSearchQuery()"/>
+            <input id="search" type="text" placeholder="Search ..."
+                class="border border-gray-700 bg-gray-800 text-white p-2 rounded w-full md:w-[40%] mx-auto" oninput="update_search_results()"/>
         </div>
         <div id="results">
         </div>
