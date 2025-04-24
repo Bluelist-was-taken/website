@@ -17,5 +17,5 @@ function explorer_search(search) {
             console.error("Error:", error)
         });
     
-        return response.results;
+    return response;
 }
