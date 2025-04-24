@@ -13,11 +13,11 @@ function handle_input(value) {
 
 function update_search_results(query) {
     data = explorer_search(query).then(data =>{
-        console.log(data)
 
-        const container = document.createElement("div");
-
-        container.innerHTML = `<a>${data["minecraft"]["name"]}</a><br><a>${data["minecraft"]["uuid"]}</a><a style="float: right">${data["discord"]["name"]}</a><br><a style="float: right">${data["discord"]["id"]}</a>`
+        document.getElementById('minecraft_name').textContent = data["minecraft"]["name"];
+        document.getElementById('minecraft_uuid').textContent = data["minecraft"]["uuid"];
+        document.getElementById('discord_id').textContent = data["discord"]["id"];
+        document.getElementById('discord_name').textContent = data["discord"]["name"];
 
         const results = document.getElementById("results")
         results.appendChild(container)}
