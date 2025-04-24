@@ -7,14 +7,14 @@ function explorer_search(search) {
 
     var response = null;
 
-    fetch(url, {
+    response = fetch(url, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
         }
     })
         .then(response => response.json())
-        .then(result => {response = result})
+        .then(result => {return result})
         .catch(error => {
             console.error("Error:", error)
         });
