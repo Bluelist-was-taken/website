@@ -4,8 +4,14 @@ const index = code.search("code=") + 5
 const end = code.indexOf("&", index)
 console.log(code.slice(index, end != -1 ? code.length : end))
 
-function update_search_results() {
-    const query = document.getElementById("search").value;
+var callAPI = null
+
+function handle_input(value) {
+    clearTimeout(timeout)
+    timeout = setTimeout(update_search_results, 1000, value)
+}
+
+function update_search_results(query) {
     data = explorer_search(query).then(data =>{
         console.log(data)
 
