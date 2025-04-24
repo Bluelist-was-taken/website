@@ -18,4 +18,6 @@ function explorer_search(search) {
         .catch(error => {
             console.error("Error:", error)
         });
+    
+        return response;
 }
