@@ -7,7 +7,9 @@ console.log(code.slice(index, end != -1 ? code.length : end))
 var callAPI = null
 
 function handle_input(value) {
-    clearTimeout(callAPI)
+    if (callAPI !== null) {
+        clearTimeout(callAPI)
+    }
     callAPI = setTimeout(update_search_results, 1000, value)
 }
 
