@@ -2,7 +2,7 @@
 
 function explorer_search(search) {
 
-    Endpoint = "localhost:3000/api/dev/search/"
+    Endpoint = "http://127.0.0.1:8000/api/dev/search/"
     const url = Endpoint + search
 
     fetch(url, {
