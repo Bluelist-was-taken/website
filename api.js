@@ -19,11 +19,6 @@ function update_search_results() {
 <a style="float: right">${discordID["discord"]["id"]}</a>
 ```*/
 
-    container.appendChild(minecraftName);
-    container.appendChild(UUID);
-    container.appendChild(discordName);
-    container.appendChild(discordID);
-
     const results = document.getElementById("results")
     results.appendChild(container)
 
