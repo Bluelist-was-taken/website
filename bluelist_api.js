@@ -3,7 +3,7 @@
 function explorer_lookup(search) {
 
     Endpoint = "localhost:3000/api/dev/search/"
-    const url = Endpoint + "?query=" + search.split(" ").join("+")
+    const url = Endpoint + search
 
     fetch(url, {
         method: "GET",
