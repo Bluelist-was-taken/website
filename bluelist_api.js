@@ -21,9 +21,5 @@ function explorer_search(search) {
     request.open("GET", url);
     request.send();
 
-    console.log(request.response)
-
-    const response = JSON.parse(`{${request.responseText}}`)
-    
-    return response;
+    request.onloadend(() => {return JSON.parse(`{${request.responseText}}`)});
 }
