@@ -21,5 +21,5 @@ function explorer_search(search) {
     request.open("GET", url);
     request.send();
 
-    request.onloadend = () => {return JSON.parse(`{${request.responseText}}`)};
+    return JSON.parse(`{${request.responseText}}`);
 }
