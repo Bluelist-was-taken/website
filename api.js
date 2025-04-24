@@ -20,10 +20,7 @@ function update_search_results(query) {
         document.getElementById('minecraft_uuid').textContent = data["minecraft"]["uuid"];
         document.getElementById('discord_id').textContent = data["discord"]["id"];
         document.getElementById('discord_name').textContent = data["discord"]["name"];
-
-        const results = document.getElementById("results")
-        results.appendChild(container)}
-    );
+    });
 
 }
 
