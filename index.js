@@ -10,7 +10,7 @@ function handle_input(value) {
     if (callAPI !== null) {
         clearTimeout(callAPI)
     }
-    callAPI = setTimeout(update_search_results, 1000, value)
+    callAPI = setTimeout(update_search_results, 400, value)
 }
 
 function update_search_results(query) {
@@ -22,6 +22,8 @@ function update_search_results(query) {
         document.getElementById('discord_id').textContent = data["discord"]["id"];
         document.getElementById('discord_name').textContent = data["discord"]["name"];
         document.getElementById('discord_avatar').src = data["discord"]["avatar"];
+        // document.getElementById('minecraft_button').href = `https://namemc.com/profile/${data["minecraft"]["name"]}`;
+        // document.getElementById('discord_button').href = `https://discord.com/users/${data["discord"]["id"]}`;
         
     });
 
