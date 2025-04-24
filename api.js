@@ -6,23 +6,23 @@ console.log(code.slice(index, end != -1 ? code.length : end))
 
 function update_search_results() {
     const query = document.getElementById("search").value;
-    data = explorer_search(query);
+    data = explorer_search(query).then(data =>{
+        console.log(data)
 
-    console.log(data)
+        const container = document.createElement("div");
 
-    const container = document.createElement("div");
+        container.innerHTML = data
+        /*
+    ```
+    <a>${data["minecraft"]["name"]}</a><br>
+    <a>${data["minecraft"]["uuid"]}</a>
+    <a style="float: right">${data["discord"]["name"]}</a><br>
+    <a style="float: right">${discordID["discord"]["id"]}</a>
+    ```*/
 
-    container.innerHTML = data
-    /*
-```
-<a>${data["minecraft"]["name"]}</a><br>
-<a>${data["minecraft"]["uuid"]}</a>
-<a style="float: right">${data["discord"]["name"]}</a><br>
-<a style="float: right">${discordID["discord"]["id"]}</a>
-```*/
-
-    const results = document.getElementById("results")
-    results.appendChild(container)
+        const results = document.getElementById("results")
+        results.appendChild(container)}
+    );
 
 }
 
