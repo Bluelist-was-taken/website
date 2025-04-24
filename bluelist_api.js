@@ -14,7 +14,7 @@ function explorer_search(search) {
         }
     })
         .then(response => response.json())
-        .then(result => {return result})
+        .then(result => {response = result})
         .catch(error => {
             console.error("Error:", error)
         });
