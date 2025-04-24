@@ -10,13 +10,14 @@ function update_search_results() {
 
     const container = document.createElement("div");
 
-    container.innerHTML =
+    container.innerHTML = data
+    /*
 ```
 <a>${data["minecraft"]["name"]}</a><br>
 <a>${data["minecraft"]["uuid"]}</a>
 <a style="float: right">${data["discord"]["name"]}</a><br>
 <a style="float: right">${discordID["discord"]["id"]}</a>
-```
+```*/
 
     container.appendChild(minecraftName);
     container.appendChild(UUID);
