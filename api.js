@@ -11,13 +11,7 @@ function update_search_results() {
 
         const container = document.createElement("div");
 
-        container.innerHTML =
-    ```
-    <a>${data["minecraft"]["name"]}</a><br>
-    <a>${data["minecraft"]["uuid"]}</a>
-    <a style="float: right">${data["discord"]["name"]}</a><br>
-    <a style="float: right">${data["discord"]["id"]}</a>
-    ```
+        container.innerHTML = `<a>${data["minecraft"]["name"]}</a><br><a>${data["minecraft"]["uuid"]}</a><a style="float: right">${data["discord"]["name"]}</a><br><a style="float: right">${data["discord"]["id"]}</a>`
 
         const results = document.getElementById("results")
         results.appendChild(container)}
