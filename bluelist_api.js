@@ -5,7 +5,7 @@ function explorer_search(search) {
     Endpoint = "http://127.0.0.1:8000/api/dev/search/"
     const url = Endpoint + search
 
-    const response = fetch(url, {
+    /* const response = fetch(url, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -15,7 +15,13 @@ function explorer_search(search) {
         .then(result => {return result})
         .catch(error => {
             console.error("Error:", error)
-        });
+        }); */
+    
+    const request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.send();
+
+    const response = JSON.parse(request.responseText)
     
     return response;
 }
