@@ -25,14 +25,16 @@
             <input id="search" type="text" placeholder="Search ..."
                 class="border border-gray-700 bg-gray-800 text-white p-2 rounded w-full md:w-[40%] mx-auto" oninput="handle_input(this.value)"/>
         </div>
-        <div class="flex flex-row space-x-5">
-            <div>
+        <div id="container" class="flex flex-row space-x-5">
+            <div class="flex flex-col border border-gray-700 rounded p-5 items-center justify-center space-y-2">
                 <div id="minecraft_name" data-placeholder="???"></div>
                 <div id="minecraft_uuid" data-placeholder="???"></div>
+                <img id="minecraft_avatar" src="" class="w-52">
             </div>
-            <div>
-                <div id="discord_id" data-placeholder="???"></div>
+            <div class="flex flex-col border border-gray-700 rounded p-5 items-center justify-center space-y-2">
                 <div id="discord_name" data-placeholder="???"></div>
+                <div id="discord_id" data-placeholder="???"></div>
+                <img id="discord_avatar" src="" class="w-52">
             </div>
         </div>
     </div>
