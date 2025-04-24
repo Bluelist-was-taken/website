@@ -8,21 +8,15 @@ function update_search_results() {
     const query = document.getElementById("search").value;
     data = explorer_search(query);
 
-    const minecraftName = document.createElement("a");
-    minecraftName.innerText = data["minecraft"]["username"]
-
-    const UUID = document.createElement("a");
-    UUID.innerText = data["minecraft"]["uuid"]
-
-    const discordName = document.createElement("a");
-    discordName.style.float = "right";
-    discordName.innerText = data["discord"]["username"]
-
-    const discordID = document.createElement("a");
-    discordID.style.float = "right";
-    discordID.innerText = data["discord"]["id"]
-
     const container = document.createElement("div");
+
+    container.innerHTML =
+```
+<a>${data["minecraft"]["name"]}</a><br>
+<a>${data["minecraft"]["uuid"]}</a>
+<a style="float: right">${data["discord"]["name"]}</a><br>
+<a style="float: right">${discordID["discord"]["id"]}</a>
+```
 
     container.appendChild(minecraftName);
     container.appendChild(UUID);
