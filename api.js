@@ -8,6 +8,8 @@ function update_search_results() {
     const query = document.getElementById("search").value;
     data = explorer_search(query);
 
+    console.log(data)
+
     const container = document.createElement("div");
 
     container.innerHTML = data
