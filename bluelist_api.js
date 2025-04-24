@@ -13,11 +13,7 @@ function explorer_search(search) {
             "Content-Type": "application/json"
         }
     })
-        .then(response => {response = response.json()})
-        .then(data => {
-            console.log(response)
-            return response
-        })
+        .then(response => {return response.json()})
         .catch(error => {
             console.error("Error:", error)
         });
