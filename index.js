@@ -6,6 +6,14 @@ console.log(code.slice(index, end != -1 ? code.length : end))
 
 var callAPI = null
 
+function copyUUID() {
+    navigator.clipboard.writeText(document.querySelector("#minecraft .id").textContent)
+}
+
+function copyID() {
+    navigator.clipboard.writeText(document.querySelector("#discord .id").textContent)
+}
+
 function handle_input(value) {
     if (callAPI !== null) {
         clearTimeout(callAPI)
