@@ -1,9 +1,10 @@
-@import url("style_portrait.css") screen and (orientation: portrait);
-@import url("style_landscape.css") screen and (orientation: landscape);
+@import url("main.css");
+@import url("portrait.css") screen and (orientation: portrait);
+@import url("landscape.css") screen and (orientation: landscape);
 
 body {
     text-align: center;
-    background-color: rgb(27, 31, 54);
+    background-color: var(--bg-color);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: lightgray;
     margin: 0;
@@ -21,10 +22,10 @@ body {
 
 #searchbar {
     color: lightgray;
-    border: 2px solid black;
+    box-shadow: 0 0 0 1px black;
     background-color: hsl(231, 43%, 27%);
     font-weight: bold;
-    box-sizing: border-box;
+    border: none;
 }
 
 #searchbar:placeholder-shown {
@@ -32,8 +33,7 @@ body {
 }
 
 #searchbar:focus {
-    border: 3px solid black;
-    outline: none;
+    box-shadow: 0 0 0 2px black;
 }
 
 #results {
@@ -44,7 +44,7 @@ body {
 }
 
 .card {
-    border: 2px solid black;
+    box-shadow: 0 0 0 2px black;
     font-weight: bold;
 }
 

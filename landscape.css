@@ -1,5 +1,5 @@
 #searchbar {
-    width: 50%;
+    width: 50vw;
     height: 50px;
     border-radius: 6px;
     padding: 0 10px;
@@ -12,8 +12,8 @@
 
 .card {
     border-radius: 10px;
-    width: 200px;
-    margin: 0 10px;
+    width: calc((50vw) / 2);
+    margin: 0;
     padding: 10px 15px;
 }
     
