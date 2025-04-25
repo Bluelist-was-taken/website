@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bluelist Explorer</title>
+</head>
+<body>
+    <a id="login" href="/api/discord-login">Mit Discord anmelden</a>
+    <div id="content">
+        <h1>Bluelist Explorer</h1>
+        <input id="search" placeholder="Minecraft name or Discord ID" oninput="handle_input(this.value)"><br>
+        <div id="container">
+            <div class="card" id="discord">
+                <h2>Discord</h2>
+                <img src="" class="image">
+                <p class="name">controllMaster21</p>
+                <p class="id">826517140193542186</p>
+            </div>
+            <div class="card" id="minecraft">
+                <h2>Minecraft</h2>
+                <img src="" class="image">
+                <p class="name">controllMaster21</p>
+                <p class="id">UUID</p>
+            </div>
+        </div>
+    </div>
+    <script src="bluelist_api.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
