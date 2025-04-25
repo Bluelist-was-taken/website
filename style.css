@@ -18,6 +18,7 @@ body {
     height: 60vh;
     position: absolute;
     top: 500px;
+    transition: 1000s
 }
 
 #searchbar {
