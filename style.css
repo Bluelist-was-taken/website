@@ -88,15 +88,12 @@ body {
 .copy {
     padding: 12px 10px;
     box-sizing: border-box;
-    right: 10px;
-    top: 15px;
     background-color: hsl(231, 43%, 27%);
     color: #E0E3FF;
     border-radius: 5px;
     border: None;
     height: 40px;
     cursor: pointer;
-    position: fixed;
     transition: 200ms;
     z-index: 1;
     margin-top: 10px;
