@@ -16,12 +16,12 @@ function handle_input(value) {
 function update_search_results(query) {
     data = explorer_search(query).then(data =>{
 
-        document.getElementById('minecraft_name').textContent = data["minecraft"]["name"];
-        document.getElementById('minecraft_uuid').textContent = data["minecraft"]["uuid"];
-        document.getElementById('minecraft_avatar').src = data["minecraft"]["head"];
-        document.getElementById('discord_id').textContent = data["discord"]["id"];
-        document.getElementById('discord_name').textContent = data["discord"]["name"];
-        document.getElementById('discord_avatar').src = data["discord"]["avatar"];
+        document.querySelector("#minecraft .name").textContent = data["minecraft"]["name"];
+        document.querySelector("#minecraft .id").textContent = data["minecraft"]["uuid"];
+        document.querySelector("#minecraft .image").src = data["minecraft"]["head"];
+        document.querySelector("#discord .id").textContent = data["discord"]["id"];
+        document.querySelector("#discord .name").textContent = data["discord"]["name"];
+        document.querySelector("#discord .image").src = data["discord"]["avatar"];
         // document.getElementById('minecraft_button').href = `https://namemc.com/profile/${data["minecraft"]["name"]}`;
         // document.getElementById('discord_button').href = `https://discord.com/users/${data["discord"]["id"]}`;
         
