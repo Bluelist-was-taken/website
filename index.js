@@ -42,11 +42,8 @@ function update_search_results(query) {
         // document.getElementById('discord_button').href = `https://discord.com/users/${data["discord"]["id"]}`;
 
         const res = document.getElementById("results");
-
-        const content = document.getElementById("content");
-        content.style.top = "100px";
         
-        res.style.display = "inline-flex";
+        res.style.display = "grid";
         res.style.opacity = "100%";
     });
 

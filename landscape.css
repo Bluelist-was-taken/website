@@ -1,19 +1,25 @@
 #searchbar {
-    width: 50vw;
+    width: 45vw;
     height: 50px;
-    border-radius: 6px;
-    padding: 0 10px;
     font-size: 15px;
+    margin-bottom: 30px;
+    width: calc(50% - 5px);
+    border-radius: 10px;
+    padding: 10px 15px;
 }
 
 #results {
+    width: 100%;
     margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 .card {
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 10px;
-    width: calc((50vw) / 2);
-    margin: 0;
     padding: 10px 15px;
 }
     
