@@ -7,11 +7,19 @@ console.log(code.slice(index, end != -1 ? code.length : end))
 var callAPI = null
 
 function copyUUID() {
-    navigator.clipboard.writeText(document.querySelector("#minecraft .id").textContent)
+    try {
+        navigator.clipboard.writeText(document.querySelector("#minecraft .id").textContent)
+    } catch (error) {
+        alert("We don't have the Permission to write something to your clipboard")
+    }
 }
 
 function copyID() {
-    navigator.clipboard.writeText(document.querySelector("#discord .id").textContent)
+    try {
+        navigator.clipboard.writeText(document.querySelector("#discord .id").textContent)
+    } catch (error) {
+        alert("We don't have the Permission to write something to your clipboard")
+    }
 }
 
 function handle_input(value) {
