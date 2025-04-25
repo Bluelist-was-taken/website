@@ -18,7 +18,7 @@ body {
     height: 60vh;
     position: absolute;
     top: 500px;
-    transition: 1000s
+    transition: 1000ms;
 }
 
 #searchbar {
@@ -43,8 +43,8 @@ body {
     box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: center;
-    transition: 1s;
-    transition-delay: 1s;
+    transition: 1000ms;
+    transition-delay: 1000ms;
 }
 
 .card {
