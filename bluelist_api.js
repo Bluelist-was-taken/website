@@ -12,7 +12,7 @@ async function explorer_search(search) {
             }
         });
         if (!response.ok) {
-            throw new Error(`Error while calling API: ${respnse.status}`);
+            throw new Error(`Error while calling API: ${response.status}`);
         }
         return await response.json();
     } catch (error) {
