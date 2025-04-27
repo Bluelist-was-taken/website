@@ -4,7 +4,8 @@
 }
 
 #content {
-    width: 50vw;
+    min-width: 50vw;
+    max-width: 90vw;
     height: auto;
 }
 
@@ -34,8 +35,7 @@
 }
     
 .card #image {
-    width: 20vh;
-    height: 20vh;
+    width: 13vw;
     border-radius: 10px;
     margin-bottom: 30px;
 }

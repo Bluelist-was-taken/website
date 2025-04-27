@@ -37,26 +37,32 @@ document.getElementById('searchbar').addEventListener('input', (event) => {
 });
 
 function update_search_results(query) {
-    try {
-        data = explorer_search(query).then(data =>{
+    if (query != "") {
+        try {
+            data = explorer_search(query).then(data =>{
 
-            document.querySelector("#status").textContent = "";
-            // Textfelder
-            document.querySelector("#minecraft #name").textContent = data["minecraft"]["name"];
-            document.querySelector("#minecraft #id").textContent = data["minecraft"]["uuid"];
-            document.querySelector("#minecraft #image").src = data["minecraft"]["head"];
-            document.querySelector("#discord #name").textContent = data["discord"]["name"];
-            document.querySelector("#discord #id").textContent = data["discord"]["id"];
-            document.querySelector("#discord #image").src = data["discord"]["avatar"];
+                document.querySelector("#status").textContent = "";
+                // Textfelder
+                document.querySelector("#minecraft #name").textContent = data["minecraft"]["name"];
+                document.querySelector("#minecraft #id").textContent = data["minecraft"]["uuid"];
+                document.querySelector("#minecraft #image").src = data["minecraft"]["head"];
+                document.querySelector("#discord #name").textContent = data["discord"]["name"];
+                document.querySelector("#discord #id").textContent = data["discord"]["id"];
+                document.querySelector("#discord #image").src = data["discord"]["avatar"];
 
-            const res = document.getElementById("results");
-            
-            res.style.display = "grid";
-            res.style.opacity = "100%";
-    });
-    } catch (error) {
-        document.querySelector("#status").textContent = "Error";
+                const res = document.getElementById("results");
+                
+                res.style.display = "grid";
+        });
+        } catch (error) {
+            document.querySelector("#status").textContent = "Error";
+        }
+    } else {
+        const res = document.getElementById("results");
+                
+        res.style.display = "none";
     }
+
 }
 
 // Funktionen fürs HTML zugänglich machen
