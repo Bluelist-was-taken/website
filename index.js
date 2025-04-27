@@ -1,3 +1,5 @@
+import { explorer_search } from "./bluelist_api"
+
 var code = new URL(window.location.href)
 code = code.search
 const index = code.search("code=") + 5
@@ -32,27 +34,17 @@ function handle_input(value) {
 function update_search_results(query) {
     data = explorer_search(query).then(data =>{
 
-        document.querySelector("#minecraft .name").textContent = data["minecraft"]["name"];
-        document.querySelector("#minecraft .id").textContent = data["minecraft"]["uuid"];
-        document.querySelector("#minecraft .image").src = data["minecraft"]["head"];
-        document.querySelector("#discord .id").textContent = data["discord"]["id"];
-        document.querySelector("#discord .name").textContent = data["discord"]["name"];
-        document.querySelector("#discord .image").src = data["discord"]["avatar"];
-        // document.getElementById('minecraft_button').href = `https://namemc.com/profile/${data["minecraft"]["name"]}`;
-        // document.getElementById('discord_button').href = `https://discord.com/users/${data["discord"]["id"]}`;
+        // Textfelder
+        document.querySelector("#minecraft #name").textContent = data["minecraft"]["name"];
+        document.querySelector("#minecraft #id").textContent = data["minecraft"]["uuid"];
+        document.querySelector("#minecraft #image").src = data["minecraft"]["head"];
+        document.querySelector("#discord #name").textContent = data["discord"]["name"];
+        document.querySelector("#discord #id").textContent = data["discord"]["id"];
+        document.querySelector("#discord #image").src = data["discord"]["avatar"];
 
         const res = document.getElementById("results");
         
         res.style.display = "grid";
         res.style.opacity = "100%";
     });
-
-}
-
-function getAccessToken(id, secret) {
-    const tokenRequest = new XMLHttpRequest()
-    tokenRequest.open("POST", "https://discord.com/api/v10/oauth2/token", username=id, password=secret)
-    tokenRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-    tokenRequest.send("grant_type=authorization_code&code=code")
-    console.log(tokenRequest.response)
 }

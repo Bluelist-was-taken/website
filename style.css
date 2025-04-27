@@ -1,4 +1,4 @@
-@import url("main.css");
+@import url("properties.css");
 @import url("portrait.css") screen and (orientation: portrait);
 @import url("landscape.css") screen and (orientation: landscape);
 
