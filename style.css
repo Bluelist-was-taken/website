@@ -9,6 +9,31 @@ Don't paste code here if you havn't split it up between main, landscape and port
 
 =========================== */ 
 
+#searchbar {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-color-1);
+    border-radius: var(--border-radius);
+    font-family: var(--font);
+    color: lightgray;
+    font-weight: normal;
+    border: none;
+} #searchbar:placeholder-shown {
+    font-weight: lighter;
+} #searchbar:focus {
+    background-color: var(--secondary-color);
+    /* box-shadow: 0 0 0 2px black; */
+    outline: none;
+}
+
+#error {
+    box-shadow: 0 0 0 2px var(--attention-color);
+    color: var(--attention-color);
+    border-radius: var(--border-radius);
+    display: none;
+    margin: auto;
+}
+
 .card #name {
     margin-top: 0;
     font-weight: 500;
@@ -49,21 +74,7 @@ body {
     justify-content: center;
 }
 
-#searchbar {
-    background-color: var(--bg-color-1);
-    box-sizing: border-box;
-    width: 100%;
-    color: lightgray;
-    /* box-shadow: 0 0 0 1px black; */
-    font-weight: bold;
-    border: none;
-} #searchbar:placeholder-shown {
-    font-weight: normal;
-} #searchbar:focus {
-    background-color: var(--secondary-color);
-    /* box-shadow: 0 0 0 2px black; */
-    outline: none;
-}
+
 
 #results {
     margin: 0 auto;
@@ -116,11 +127,3 @@ body {
     margin-left: 1vw;
 }
 
-#error {
-    box-shadow: 0 0 0 2px var(--attention-color);
-    color: var(--attention-color);
-    padding: 0.7rem;
-    border-radius: 10px;
-    display: none;
-    margin: auto;
-}

@@ -1,6 +1,5 @@
 import { explorer_search } from "./bluelist_api.js"
 
-
 var code = new URL(window.location.href)
 code = code.search
 const index = code.search("code=") + 5
@@ -60,7 +59,6 @@ function update_search_results(query) {
         document.getElementById("results").style.display = "none";
         document.getElementById("error").style.display = "none";
     }
-
 }
 
 // Funktionen fürs HTML zugänglich machen
