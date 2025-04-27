@@ -116,10 +116,10 @@ body {
     margin-left: 1vw;
 }
 
-#status {
-    background-color: var(--attention-color);
+#error {
+    box-shadow: 0 0 0 2px var(--attention-color);
+    color: var(--attention-color);
     padding: 0.7rem;
-    width: fit-content;
     border-radius: 10px;
     display: none;
     margin: auto;
