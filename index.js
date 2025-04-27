@@ -41,7 +41,6 @@ function update_search_results(query) {
         try {
             data = explorer_search(query).then(data =>{
 
-                document.querySelector("#status").textContent = "";
                 // Textfelder
                 document.querySelector("#minecraft #name").textContent = data["minecraft"]["name"];
                 document.querySelector("#minecraft #id").textContent = data["minecraft"]["uuid"];
@@ -53,14 +52,18 @@ function update_search_results(query) {
                 const res = document.getElementById("results");
                 
                 res.style.display = "grid";
+
+                document.getElementById("status").style.display = "none";
         });
         } catch (error) {
-            document.querySelector("#status").textContent = "Error";
+            document.getElementById("status").style.display = "block";
+            document.getElementById("results").style.display = "none";
         }
     } else {
         const res = document.getElementById("results");
                 
         res.style.display = "none";
+        document.getElementById("status").style.display = "none";
     }
 
 }
