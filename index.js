@@ -40,6 +40,7 @@ function update_search_results(query) {
     try {
         data = explorer_search(query).then(data =>{
 
+            document.querySelector("#status").textContent = "";
             // Textfelder
             document.querySelector("#minecraft #name").textContent = data["minecraft"]["name"];
             document.querySelector("#minecraft #id").textContent = data["minecraft"]["uuid"];
