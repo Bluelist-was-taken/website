@@ -90,45 +90,6 @@ body {
     overflow-wrap: anywhere;
 }
 
-.copy {
-    padding: 12px 10px;
-    box-sizing: border-box;
-    background-color: hsl(231, 43%, 27%);
-    color: #E0E3FF;
-    border-radius: 5px;
-    border: None;
-    height: 40px;
-    cursor: pointer;
-    transition: 200ms;
-    z-index: 1;
-    margin-top: 10px;
-}
-
-.copy:hover {
-    background-color: hsl(231, 33%, 37%);
-}
-
-#login {
-    padding: 12px 10px;
-    box-sizing: border-box;
-    right: 10px;
-    top: 15px;
-    background-color: #5865f2;
-    color: #E0E3FF;
-    border-radius: 5px;
-    border: None;
-    height: 40px;
-    cursor: pointer;
-    position: fixed;
-    transition: 200ms;
-    z-index: 1;
-    text-decoration: none;
-}
-
-#login:hover {
-    background-color: hsl(235, 60%, 55%);
-}
-
 #topnav {
     top: 0 !important;
     width: 100%;
