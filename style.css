@@ -2,13 +2,37 @@
 @import url("portrait.css") screen and (orientation: portrait);
 @import url("landscape.css") screen and (orientation: landscape);
 
+/* ===========================
+
+Sorted CSS Code
+Don't paste code here if you havn't split it up between main, landscape and portrait code
+
+=========================== */ 
+
+.card #name {
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.card #id {
+    font-weight: 200;
+    font-size: 14px;
+    color: var(--text-secondary-color)
+}
+
+/* ===========================
+
+Unsorted CSS Dump:
+
+=========================== */ 
+
 body {
     display: grid;
     place-items: center;
     justify-content: center;
     align-items: center;
     background-color: var(--bg-color);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--font);
     color: lightgray;
     margin: 0;
     padding: 0;

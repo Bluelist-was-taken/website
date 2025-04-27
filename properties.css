@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Quicksand:wght@300..700&display=swap');
+
 :root {
     --bg-color: #050508;
     --bg-color-1: #0D0C12;
@@ -8,4 +10,5 @@
     --text-secondary-color: #7b7a7e;
     --attention-color: #FF6B6B;
     --succes-color: #32D896;
+    --font: 'Quicksand', sans-serif;
 }
