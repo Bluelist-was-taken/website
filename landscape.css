@@ -3,8 +3,13 @@
     align-items: center;
 }
 
+#content {
+    width: 50vw;
+    height: auto;
+}
+
 #searchbar {
-    width: 45vw;
+    width: 100%;
     height: 50px;
     font-size: 15px;
     margin-bottom: 30px;
@@ -28,8 +33,9 @@
     padding: 10px 15px;
 }
     
-.card .image {
-    width: 70px;
-    height: 70px;
+.card #image {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 10px;
     margin-bottom: 30px;
 }

@@ -19,8 +19,6 @@ body {
 
 #content {
     box-sizing: border-box;
-    width: 50vh;
-    height: auto;
     position: relative;
     margin: auto auto;
     transition: 1000ms;
