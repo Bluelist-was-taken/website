@@ -1,4 +1,5 @@
-import { explorer_search } from "./bluelist_api"
+import { explorer_search } from "./bluelist_api.js"
+
 
 var code = new URL(window.location.href)
 code = code.search
@@ -31,20 +32,31 @@ function handle_input(value) {
     callAPI = setTimeout(update_search_results, 400, value)
 }
 
+document.getElementById('searchbar').addEventListener('input', (event) => {
+    handle_input(event.target.value);
+});
+
 function update_search_results(query) {
-    data = explorer_search(query).then(data =>{
+    try {
+        data = explorer_search(query).then(data =>{
 
-        // Textfelder
-        document.querySelector("#minecraft #name").textContent = data["minecraft"]["name"];
-        document.querySelector("#minecraft #id").textContent = data["minecraft"]["uuid"];
-        document.querySelector("#minecraft #image").src = data["minecraft"]["head"];
-        document.querySelector("#discord #name").textContent = data["discord"]["name"];
-        document.querySelector("#discord #id").textContent = data["discord"]["id"];
-        document.querySelector("#discord #image").src = data["discord"]["avatar"];
+            // Textfelder
+            document.querySelector("#minecraft #name").textContent = data["minecraft"]["name"];
+            document.querySelector("#minecraft #id").textContent = data["minecraft"]["uuid"];
+            document.querySelector("#minecraft #image").src = data["minecraft"]["head"];
+            document.querySelector("#discord #name").textContent = data["discord"]["name"];
+            document.querySelector("#discord #id").textContent = data["discord"]["id"];
+            document.querySelector("#discord #image").src = data["discord"]["avatar"];
 
-        const res = document.getElementById("results");
-        
-        res.style.display = "grid";
-        res.style.opacity = "100%";
+            const res = document.getElementById("results");
+            
+            res.style.display = "grid";
+            res.style.opacity = "100%";
     });
+    } catch (error) {
+        document.querySelector("#status").textContent = "Error";
+    }
 }
+
+// Funktionen fürs HTML zugänglich machen
+window.handle_input = handle_input

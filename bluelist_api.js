@@ -2,7 +2,7 @@
 
 export async function explorer_search(search) {
 
-    Endpoint = "http://127.0.0.1:8000/api/dev/search/"
+    const Endpoint = "http://127.0.0.1:8000/api/dev/search/"
     const url = Endpoint + search
     try {
         const response = await fetch(url, {
@@ -18,6 +18,5 @@ export async function explorer_search(search) {
     } catch (error) {
         console.error("Error: ", error);
         return null;
-        throw error;
     }
 }
