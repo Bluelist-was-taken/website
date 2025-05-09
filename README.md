@@ -1,7 +1,7 @@
 ```
 root/
 ├── src/                  # Svelte source code
-├── static/               # Svelte static files
+│   └── 
 └── ...
 ```
 
@@ -10,4 +10,5 @@ root/
 1. **Setup**\
    Working directory: `root/`
    ```bash
-   ``
+   npm run dev
+   ```
